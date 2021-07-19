@@ -13,15 +13,15 @@
         <div class="container">
             <a href="/">PetShop</a>
             <form method="GET" action="/search">
-                <input type="search" name="q" placeholder="Pesquise por raça do Pet"/>
+                <input type="search" name="q" placeholder="Pesquise por raça do Pet" value="{{ query }}" />
             </form>
         </div>
     </header>
     <nav>
         <ul>
-            <li class="active"><a href="/">Todos</a></li>
-            <li class=""><a href="/dogs">cachorros</a></li>
-            <li class=""><a href="/cats">Gatos</a></li>
-            <li class=""><a href="/fishes">Peixes</a></li>
+            <li class="{{#menu.all}}active{{/menu.all}}"><a href="/">Todos</a></li>
+            <li class="{{#menu.dog}}active{{/menu.dog}}"><a href="/dogs">cachorros</a></li>
+            <li class="{{#menu.cat}}active{{/menu.cat}}"><a href="/cats">Gatos</a></li>
+            <li class="{{#menu.fish}}active{{/menu.fish}}"><a href="/fishes">Peixes</a></li>
         </ul>
     </nav>
